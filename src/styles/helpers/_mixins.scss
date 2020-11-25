@@ -1,0 +1,6 @@
+@mixin transition($sec, $type: all) {
+    -webkit-transition: $type $sec ease-in-out;
+    -moz-transition: $type $sec ease-in-out;
+    -o-transition: $type $sec ease-in-out;
+    transition: $type $sec ease-in-out;
+}
