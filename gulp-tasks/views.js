@@ -17,7 +17,7 @@ gulp.task("views", () => {
             prefix: "@@",
             basepath: "@file"
         }))
-        .pipe(gulpif(production, replace("http://localhost:4000/", path.domain)))
+        .pipe(gulpif(production, replace(paths.domain.from, paths.domain.to)))
         .pipe(gulp.dest(paths.views.dist))
         .pipe(browsersync.stream());
 });
