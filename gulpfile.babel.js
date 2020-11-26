@@ -47,7 +47,8 @@ const requireDir = require("require-dir"),
         favicons: {
             src: "./src/img/favicon/*.{jpg,jpeg,png,gif}",
             dist: "./dist/img/favicons/",
-        }
+        },
+        domain: "https://meyou-demo.netlify.app/",
     };
 
 requireDir("./gulp-tasks/");
