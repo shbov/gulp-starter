@@ -68,6 +68,7 @@
         "yargs": "^15.4.1"
     },
     "dependencies": {
+        "event-stream": "^4.0.1",
         "jquery": "^3.5.1",
         "smart-grid": "^2.1.2"
     }
