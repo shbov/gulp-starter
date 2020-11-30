@@ -44,9 +44,19 @@ const requireDir = require("require-dir"),
             dist: "./dist/fonts/",
             watch: "./src/fonts/**/*.{woff,woff2}"
         },
-        favicons: {
-            src: "./src/img/favicon/*.{jpg,jpeg,png,gif}",
-            dist: "./dist/img/favicons/",
+        favicons: [{
+                src: "./src/img/favicon/favicon.{jpg,jpeg,png,gif}",
+                dist: "./dist/img/favicons/",
+            },
+            // {
+            //     src: "./src/img/favicon/favicon-2.{jpg,jpeg,png,gif}",
+            //     dist: "./dist/img/favicons/favicon-2/",
+            // }
+        ],
+        domain: {
+            local: "http://localhost:4000/",
+            netlify: "https://meyou-demo.netlify.app/",
+            production: "https://1.meyou.ru/demo/",
         }
     };
 

@@ -10,6 +10,7 @@
     "scripts": {
         "dev": "gulp",
         "build": "gulp prod --production",
+        "build:netlify":"gulp prod --netlify",
         "build:views": "gulp views --production",
         "build:styles": "gulp styles --production",
         "build:scripts": "gulp scripts --production",
@@ -68,20 +69,8 @@
         "yargs": "^15.4.1"
     },
     "dependencies": {
+        "event-stream": "^4.0.1",
         "jquery": "^3.5.1",
         "smart-grid": "^2.1.2"
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged"
-        }
-    },
-    "lint-staged": {
-        "!(_*).scss": [
-            "stylelint --fix --color --config ./.stylelintrc"
-        ],
-        "*.js": [
-            "eslint --fix --color"
-        ]
     }
 }
