@@ -70,18 +70,5 @@
     "dependencies": {
         "jquery": "^3.5.1",
         "smart-grid": "^2.1.2"
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged"
-        }
-    },
-    "lint-staged": {
-        "!(_*).scss": [
-            "stylelint --fix --color --config ./.stylelintrc"
-        ],
-        "*.js": [
-            "eslint --fix --color"
-        ]
     }
 }
