@@ -54,8 +54,9 @@ const requireDir = require("require-dir"),
             // }
         ],
         domain: {
-            from: "http://localhost:4000/",
-            to: "https://meyou-demo.netlify.app/",
+            local: "http://localhost:4000/",
+            netlify: "https://meyou-demo.netlify.app/",
+            production: "https://1.meyou.ru/demo/",
         }
     };
 

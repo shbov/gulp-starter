@@ -10,6 +10,7 @@
     "scripts": {
         "dev": "gulp",
         "build": "gulp prod --production",
+        "build:netlify":"gulp prod --netlify",
         "build:views": "gulp views --production",
         "build:styles": "gulp styles --production",
         "build:scripts": "gulp scripts --production",
