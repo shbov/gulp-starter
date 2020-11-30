@@ -14,8 +14,6 @@ const argv = yargs.argv,
     production = !!argv.production,
     netlify = !!argv.netlify;
 
-console.log(argv);
-
 gulp.task("views", () => {
     return gulp.src(paths.views.src)
         .pipe(include({
@@ -23,7 +21,7 @@ gulp.task("views", () => {
             basepath: "@file"
         }))
         .pipe(gulpif(production, replace(paths.domain.local, paths.domain.production)))
-        .pipe(gulpif(netlify, replace(paths.domain.local, paths.domain.netlify)))
+        .pipe(gulpif(netlify, replace(paths.domain.production, paths.domain.netlify)))
         .pipe(gulp.dest(paths.views.dist))
         .pipe(browsersync.stream());
 });
