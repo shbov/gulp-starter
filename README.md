@@ -20,6 +20,7 @@
 * ```yarn run build:netlify``` - собрать проект с оптимизацией для Netlify (без оптимизации картинок)
 * ```yarn run build:fast``` - ускоренная сборка проекта (без оптимизации картинок)
 * ```yarn run build:views``` - собрать HTML-файлы
+* ```yarn run build:json``` - собрать JSON-файлы
 * ```yarn run build:styles``` - скомпилировать SCSS-файлы
 * ```yarn run build:scripts``` - собрать JS-файлы
 * ```yarn run build:images``` - собрать изображения
