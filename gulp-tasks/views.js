@@ -20,8 +20,8 @@ gulp.task("views", () => {
             prefix: "@@",
             basepath: "@file"
         }))
+        .pipe(gulpif(netlify, replace(paths.domain.local, paths.domain.netlify)))
         .pipe(gulpif(production, replace(paths.domain.local, paths.domain.production)))
-        .pipe(gulpif(netlify, replace(paths.domain.production, paths.domain.netlify)))
         .pipe(gulp.dest(paths.views.dist))
         .pipe(browsersync.stream());
 });

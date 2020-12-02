@@ -6,8 +6,7 @@ const requireDir = require("require-dir"),
     paths = {
         views: {
             src: [
-                "./src/views/**/*.html",
-                "./src/views/pages/*.html"
+                "./src/views/**/*.html"
             ],
             dist: "./dist/",
             watch: [
@@ -57,7 +56,14 @@ const requireDir = require("require-dir"),
             local: "http://localhost:4000/",
             netlify: "https://meyou-demo.netlify.app/",
             production: "https://1.meyou.ru/demo/",
-        }
+        },
+        json: {
+            src: [
+                "./src/json/**/*.json"
+            ],
+            dist: "./dist/json/",
+            watch: ["./src/json/**/*.json"]
+        },
     };
 
 requireDir("./gulp-tasks/");
@@ -67,10 +73,14 @@ export {
 };
 
 export const development = gulp.series("clean", "smart-grid",
-    gulp.parallel(["views", "styles", "scripts", "images", "fonts", "favicons"]),
+    gulp.parallel(["views", "styles", "scripts", "images", "fonts", "favicons", "json"]),
     gulp.parallel("serve"));
 
 export const prod = gulp.series("clean",
-    gulp.parallel(["views", "styles", "scripts", "images", "fonts", "favicons"]));
+    gulp.parallel(["views", "styles", "scripts", "images", "fonts", "favicons", "json"]));
+
+
+export const fast = gulp.series("clean",
+    gulp.parallel(["views", "styles", "scripts", "images-copy", "fonts", "favicons", "json"]));
 
 export default development;
