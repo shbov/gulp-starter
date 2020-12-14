@@ -11,6 +11,7 @@ const requireDir = require("require-dir"),
             dist: "./dist/",
             watch: [
                 "./src/blocks/**/*.pug",
+                "./src/views/*.pug",
                 "./src/views/**/*.pug"
             ]
         },
