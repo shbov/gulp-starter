@@ -1,3 +1,11 @@
+## :fire: Особенности
+* именование классов по [БЭМ](https://ru.bem.info/)
+* используется БЭМ-структура
+* используются препроцессоры [Pug](https://pugjs.org/) [(Guide)](https://gist.github.com/neretin-trike/53aff5afb76153f050c958b82abd9228) и [SCSS](https://sass-lang.com/)
+* используется транспайлер [Babel](https://babeljs.io/) для поддержки современного JavaScript (ES6) в браузерах
+* используется [Webpack](https://webpack.js.org/) для сборки JavaScript-модулей
+* используется CSS-сетка [smart-grid](https://github.com/dmitry-lavrik/smart-grid) на основе Bootstrap для быстрой адаптивной вёрстки
+
 
 ## :hammer_and_wrench: Установка
 * установите [NodeJS](https://nodejs.org/en/) (если требуется) и [Yarn](https://yarnpkg.com/en/docs/install)
