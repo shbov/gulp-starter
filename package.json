@@ -72,6 +72,7 @@
     },
     "dependencies": {
         "event-stream": "^4.0.1",
+        "gulp-pug": "^4.0.1",
         "jquery": "^3.5.1",
         "smart-grid": "^2.1.2"
     }
